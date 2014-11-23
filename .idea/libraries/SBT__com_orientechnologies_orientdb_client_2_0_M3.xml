@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="SBT: com.orientechnologies:orientdb-client:2.0-M3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.orientechnologies/orientdb-client/jars/orientdb-client-2.0-M3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.orientechnologies/orientdb-client/docs/orientdb-client-2.0-M3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.orientechnologies/orientdb-client/srcs/orientdb-client-2.0-M3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
