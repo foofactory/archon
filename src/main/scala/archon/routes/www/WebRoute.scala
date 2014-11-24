@@ -1,7 +1,7 @@
 package archon.routes.www
 
 import spray.http.HttpCookie
-import spray.routing.{RequestContext, Directives, Route}
+import spray.routing.{Directives, Route}
 
 trait WebRoute extends Directives {
   val httpRoute: Route =
@@ -21,16 +21,16 @@ trait URLMatchingRoute extends Directives {
 
   val urlMatchingRoute: Route = {
     get {
-      path("customer" / IntNumber) { id =>
+      path("path" / IntNumber) { id =>
           complete {
-            html.index(s"Customer id $id").toString()
+            html.index(s"path id $id").toString()
           }
       }
     } ~
-    path("customer") {
+    path("path") {
       parameter('id.as[Int]) { id =>
         complete {
-          s"Customer Q id $id"
+          html.index(s"path Q id $id").toString()
         }}
     } ~
     path("color") {
@@ -39,13 +39,7 @@ trait URLMatchingRoute extends Directives {
         import color._
 
         complete {
-          <html>
-            <body>
-              <p>{r}</p>
-              <p>{g}</p>
-              <p>{b}</p>
-            </body>
-          </html>
+          html.index(r + " " + g + " " + b).toString()
         }
       }
     }
@@ -57,7 +51,7 @@ trait HeadersMatchingRoute extends Directives {
     path("browser") {
       headerValueByName("User-Agent") { userAgent =>
         complete {
-          s"Client is $userAgent"
+          html.index(s"Client is $userAgent").toString()
         }
       }
     }
