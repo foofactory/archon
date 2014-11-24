@@ -1,14 +1,12 @@
 assemblyJarName in assembly := "archon.jar"
 
-mainClass in assembly := Some("archon.Boot")
+mainClass in assembly := Some("archon.core.Main")
 
 name := "archon"
 
-version := "1.0"
+version := "0.1"
 
 scalaVersion := "2.11.2"
-
-version       := "0.1"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
@@ -23,6 +21,7 @@ libraryDependencies ++= {
     "org.specs2"              %% "specs2"             % "2.4.2"         % "test",
     "com.typesafe.akka"       %% "akka-actor"         % akkaVersion,
     "com.typesafe.akka"       %% "akka-testkit"       % akkaVersion     % "test",
+    "io.spray"                %% "spray-json"         % "1.3.1",
     "io.spray"                %% "spray-can"          % sprayVersion,
     "io.spray"                %% "spray-routing"      % sprayVersion,
     "io.spray"                %% "spray-testkit"      % sprayVersion    % "test"
