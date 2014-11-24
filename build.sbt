@@ -1,4 +1,3 @@
-
 assemblyJarName in assembly := "archon.jar"
 
 mainClass in assembly := Some("archon.Boot")
