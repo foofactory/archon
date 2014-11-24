@@ -1,6 +1,4 @@
-archon web framework
-====================
+Archon Web Framework 0.1-ALPHA
+==============================
 
-Pre-Alpha Status
-
-Lightweight yet full-featured Scala web framework built on Spark, Twirl, and Akka
+Lightweight yet full-featured Scala web/http framework built on Spark, Twirl, and Akka
